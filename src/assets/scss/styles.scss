@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    transition: .3s ease-in;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+    &_cold{
+        background: url('./assets/imgs/cold.webp') 0 center no-repeat;
+        background-size: cover;
+        
+    }
+    &_hot{
+        background: url('./assets/imgs/hot.webp') 0 center no-repeat;
+        background-size: cover;
+    }
+    &_def{
+        background: url('./assets/imgs/def.webp') 0 center no-repeat;
+        background-size: cover;
+        
+    }
+}
+
+.search-wrapper{
+    position: absolute;
+    top: 20px;
+    input{
+        padding: 5px;
+        border-radius: 10px 0px 10px 0px;
+        border: none;
+    }
+    button{
+        border: none;
+        background: none;
+        color: white;
+        padding: 5px;
+        font-size: 20px;
+    }
+}
+
+.data-wrapper{
+    position: absolute;
+    top: 20%;
+    color: white;
+    text-align: center;
+}
+
+.temp{
+    margin: 30px 0px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+small, span{
+    display: block;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.bottom{
+    position: absolute;
+    text-align: center;
+    bottom: 20px;
+    border-top: solid 1px white;
+    padding: 10px 0px;
+    margin: 0px 10px;
+    h5{
+        color: white;
+        font-size: 20px;
+    }
+}
+
+.icons{
+    position: absolute;
+    bottom: 30%;
+    width: 100%;
+    text-align: center;
+    i{
+        font-size: 50px;
+        color: white;
+    }
+}
+
+@media (min-width:760px){
+    .wrapper{
+        &_cold{
+            background: url('./assets/imgs/cold-desk.webp') 0 center no-repeat;
+            background-size: cover;
+        }
+        &_hot{
+            background: url('./assets/imgs/hot-desk.webp') 0 center no-repeat;
+            background-size: cover;
+        }
+        &_def{
+            background: url('./assets/imgs/def-desk.webp') 0 center no-repeat;
+            background-size: cover;
+        }
+    }
+}
